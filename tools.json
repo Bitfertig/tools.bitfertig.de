@@ -1,4 +1,5 @@
 [
+    { "category":"PHP", "year":2020, "domain":"http://tools.bitfertig.de/", "path":"md5-generator/", "label":"md5-generator", "description":"Generate md5 hashs.", "sitemap":true },
     { "category":"JS", "year":2020, "domain":"http://tools.bitfertig.de/", "path":"epc-qr-code.js/", "label":"epc-qr-code.js", "description":"Create GiroCode with QR Code.", "sitemap":true },
     { "category":"JS", "year":2020, "domain":"http://tools.bitfertig.de/", "path":"wmlang.js/", "label":"wmlang.js", "description":"Translate months and weekdays.", "sitemap":true },
     { "category":"JS", "year":2020, "domain":"http://tools.bitfertig.de/", "path":"datebob.js/", "label":"datebob.js", "description":"Handle string-dates, modify and format dates with javascript like in php.", "sitemap":true },
