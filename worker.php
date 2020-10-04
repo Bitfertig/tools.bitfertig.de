@@ -1,7 +1,6 @@
 <?php
 
-//$same = filemtime(__DIR__.'/sitemap.xml') == filemtime(__DIR__.'/sitemap.xml');
-if ( filemtime(__DIR__.'/sitemap.xml') > time() - 60*60 ) { echo 'Computer says no.'; exit; }
+if ( filemtime(__DIR__.'/sitemap.xml') > time() - 60*5 ) { echo 'Computer says no.'; exit; }
 
 
 
@@ -52,10 +51,7 @@ $tools = json_decode($file_content);
 #echo '<pre>' . var_export($json, true) . '</pre>';
 
 
-// TODO: Inject
-
-
-// Sitemap
+// Create Sitemap
 $tools_lastmod = filemtime(__DIR__.'/tools.json');
 $items = [];
 $items[] = '<url><loc>http://tools.bitfertig.de/</loc><lastmod>'. date('Y-m-d', $tools_lastmod) .'</lastmod></url>'.PHP_EOL;
@@ -74,3 +70,8 @@ $sitemap .= '</urlset>';
 file_put_contents(__DIR__.'/sitemap.xml', $sitemap);
 
 echo 'Done.';
+
+
+
+// TODO: Inject Ads if not existing
+
