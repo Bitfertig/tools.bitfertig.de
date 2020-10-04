@@ -1,1 +1,3 @@
 User-agent: *
+
+Sitemap: http://tools.bitfertig.de/sitemap.xml
