@@ -1,6 +1,6 @@
 <?php
 
-
+//$same = filemtime(__DIR__.'/sitemap.xml') == filemtime(__DIR__.'/sitemap.xml');
 if ( filemtime(__DIR__.'/sitemap.xml') > time() - 60*60 ) { echo 'Computer says no.'; exit; }
 
 
@@ -61,7 +61,10 @@ $items = [];
 $items[] = '<url><loc>http://tools.bitfertig.de/</loc><lastmod>'. date('Y-m-d', $tools_lastmod) .'</lastmod></url>'.PHP_EOL;
 foreach ($tools as $tool) {
     $tool = (object) $tool;
-    if ( $tool->sitemap && file_exists(__DIR__.'/'.$tool->path) ) $items[] = '<url><loc>'. $tool->domain . $tool->path .'</loc><lastmod>'. date('Y-m-d', dirmtime(__DIR__.'/'.$tool->path)) .'</lastmod></url>'.PHP_EOL;
+    if ( $tool->sitemap && file_exists(__DIR__.'/'.$tool->path) ) {
+        $lastmod = date('Y-m-d', dirmtime(__DIR__.'/'.$tool->path));
+        $items[] = '<url><loc>'. $tool->domain . $tool->path .'</loc><lastmod>'. $lastmod .'</lastmod></url>'.PHP_EOL;
+    }
 }
 $sitemap = '<'.'?xml version="1.0" encoding="UTF-8"?'.'>'.PHP_EOL;
 $sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'.PHP_EOL;
