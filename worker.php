@@ -52,9 +52,11 @@ $tools = json_decode($file_content);
 
 
 // Create Sitemap
-$tools_lastmod = filemtime(__DIR__.'/tools.json');
 $items = [];
-$items[] = '<url><loc>http://tools.bitfertig.de/</loc><lastmod>'. date('Y-m-d', $tools_lastmod) .'</lastmod></url>'.PHP_EOL;
+$lastmod_toolsjson = filemtime(__DIR__.'/tools.json');
+$lastmod_indexphp = filemtime(__DIR__.'/index.php');
+$lastmod = $lastmod_toolsjson > $lastmod_indexphp ? $lastmod_toolsjson : $lastmod_indexphp;
+$items[] = '<url><loc>http://tools.bitfertig.de/</loc><lastmod>'. date('Y-m-d', $lastmod) .'</lastmod></url>'.PHP_EOL;
 foreach ($tools as $tool) {
     $tool = (object) $tool;
     if ( $tool->sitemap && file_exists(__DIR__.'/'.$tool->path) ) {

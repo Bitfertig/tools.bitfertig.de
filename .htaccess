@@ -1,0 +1,1 @@
+RedirectMatch "^/carbonjs/.*$" "/datebob.js/"
