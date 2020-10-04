@@ -1,1 +1,4 @@
-RedirectMatch "^/carbonjs/.*$" "/datebob.js/"
+RewriteEngine on
+RewriteBase /
+
+RewriteRule ^carbonjs.*$ datebob\.js [L,R=301]
