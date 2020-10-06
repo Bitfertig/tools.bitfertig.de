@@ -1,4 +1,5 @@
 RewriteEngine on
 RewriteBase /
 
+RewriteRule ^htpasswd.*$ htpasswd\-generator [L,R=301]
 RewriteRule ^carbonjs.*$ datebob\.js [L,R=301]
