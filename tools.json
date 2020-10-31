@@ -1,6 +1,6 @@
 [
 
-    { "category":"HTML", "year":2020, "domain":"https://www.jobsignalfire.com", "path":"", "label":"JobSignalFire", "description":"", "sitemap":false },
+    { "category":"Website", "year":2020, "domain":"https://www.jobsignalfire.com", "path":"", "label":"JobSignalFire", "description":"Job offering portal with JobPostingSchema.", "sitemap":false },
     { "category":"JS", "year":2020, "domain":"http://tools.bitfertig.de/", "path":"outerclick.vuejs/", "label":"outerclick.vuejs", "description":"Vuejs outerclick mixin.", "sitemap":true, "inject_ads":{"files":["index.html"]}, "inject_analytics":{"files":["index.html"]} },
     { "category":"Corona", "year":2020, "domain":"http://tools.bitfertig.de/", "path":"corona-hotspot-or-not/", "label":"Corona - Hotspot or Not", "description":"Check if a city is a corona hotspots.", "sitemap":true, "inject_analytics":{"files":["index.php"]} },
     { "category":"Stream", "year":2020, "domain":"http://tools.bitfertig.de/", "path":"stream-steps/", "label":"Stream Steps", "description":"Steps for streaming.", "sitemap":true, "inject_analytics":{"files":["index.html"]} },
