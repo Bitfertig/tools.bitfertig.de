@@ -1,5 +1,5 @@
 [
-    { "category":"Misc", "year":2020, "domain":"https://blog.bitfeertig.de", "path":"", "label":"Bitfertig Blog", "description":"Bitfertig Blog", "sitemap":false },
+    { "category":"Misc", "year":2020, "domain":"https://blog.bitfertig.de", "path":"", "label":"Bitfertig Blog", "description":"Bitfertig Blog", "sitemap":false },
     { "category":"Misc", "year":2020, "domain":"https://www.serieslog.com", "path":"", "label":"Series Log", "description":"Manage your series watch status.", "sitemap":false },
     { "category":"Misc", "year":2020, "domain":"https://www.openjobposting.com", "path":"", "label":"OpenJobPosting", "description":"Job offering portal with JobPostingSchema.", "sitemap":false },
     { "category":"JS", "year":2020, "domain":"http://tools.bitfertig.de/", "path":"outerclick.vuejs/", "label":"outerclick.vuejs", "description":"Vuejs outerclick mixin.", "sitemap":true, "inject_ads":{"files":["index.html"]}, "inject_analytics":{"files":["index.html"]} },
