@@ -41,12 +41,12 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASS }}
-          port: ${{ secrets.SSH_PORT }}
           script: |
             cd /var/www/vhosts/bitfertig.de/tools.bitfertig.de/
-            unzip ${{ github.run_id }}.zip
+            unzip ${{ github.run_id }}.zip -d .
             rm ${{ github.run_id }}.zip
       
       #- name: FTP-Deploy-Action
