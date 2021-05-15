@@ -46,7 +46,7 @@ jobs:
           password: ${{ secrets.SSH_PASS }}
           script: |
             cd /var/www/vhosts/bitfertig.de/tools.bitfertig.de/
-            unzip ${{ github.run_id }}.zip -fo .
+            unzip -fo ${{ github.run_id }}.zip
           #  rm ${{ github.run_id }}.zip
       
       #- name: FTP-Deploy-Action
