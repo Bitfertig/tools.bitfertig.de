@@ -60,6 +60,7 @@ main h2 {
     color: var(--color-primary);
     padding: 5px 10px;
     box-shadow: -2px 2px 1px var(--color-secondary);
+    background-color: #212529;
 }
 main a {
     color: var(--color-link);
