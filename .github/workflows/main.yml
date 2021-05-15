@@ -46,8 +46,8 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /var/www/vhosts/bitfertig.de/tools.bitfertig.de/
-          #  unzip ${{ github.run_id }}.zip
-          #  rm ${{ github.run_id }}.zip
+            unzip ${{ github.run_id }}.zip
+            rm ${{ github.run_id }}.zip
       
       #- name: FTP-Deploy-Action
       #  uses: SamKirkland/FTP-Deploy-Action@3.1.1
@@ -59,4 +59,4 @@ jobs:
       - name: curl
         uses: wei/curl@master
         with:
-          args: http://tools.bitfertig.de/worker.php
+          args: https://tools.bitfertig.de/worker.php
